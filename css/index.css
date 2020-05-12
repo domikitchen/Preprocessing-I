@@ -295,14 +295,19 @@ section #right p {
   }
 }
 @media (max-width: 950px) {
-  section #left #nav {
-    margin-bottom: 2%;
+  section {
+    display: flex;
+    flex-flow: column wrap;
   }
   section #right {
     width: 150%;
   }
 }
 @media (max-width: 800px) {
+  section {
+    display: flex;
+    flex-flow: column wrap;
+  }
   section #left nav {
     margin-bottom: 0;
   }
