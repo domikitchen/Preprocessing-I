@@ -3,10 +3,12 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@yenlo: #ffff96;
+
 .sectionholders() {
 	display: flex;
-	flex-flow: column nowrap;
-	justify-content: space-around;
+	flex-flow: column wrap;
+	justify-content: space-between;
 	align-items: center;
 }
 .psizing() {
@@ -21,7 +23,7 @@
 	h3 {
 		font-weight: bold;
 		font-size: 180%;
-		margin: 3% 0;
+		margin-bottom: 3%;
 	}
 }
 html, body, div, span, applet, object, iframe,
@@ -97,6 +99,7 @@ header {
 	#titles {
 		color: white;
 		align-self: center;
+		max-height: 20vh;
 		h1 {
 			text-shadow: 2px 2px 10px black;
 			font-weight: bold;
@@ -113,9 +116,21 @@ header {
 		margin-top: 1%;
 		width: 20%;
 		img {
-			position: absolte;
 			width: 100%;
 			border-radius: 50%;
+		}
+	}
+	@media(max-width: 1500px){
+		#backgroundimg {
+			height: 25vh;
+		}
+		#titles{
+			h1{
+				font-size: 2.5rem;
+			}
+			h2 {
+				font-size: 1.5rem;
+			}
 		}
 	}
 	@media(max-width: 800px){
@@ -125,10 +140,10 @@ header {
 		}
 		#titles{
 			h1{
-				font-size: 2.4rem;
+				font-size: 2rem;
 			}
 			h2 {
-				font-size: 1.5rem;
+				font-size: 1rem;
 			}
 		}
 	}
@@ -142,10 +157,30 @@ section {
 		.sectionholders();
 		.psizing();
 		.h3sizing();
+		#nav {
+			width: 100%;
+			nav {
+			display: flex;
+			justify-content: space-around;
+			padding: 3%;
+			font-size: 110%;
+			.current {
+				color: lighten(red, 30%);
+			}
+			a {
+				text-decoration: none;
+				font-weight: bold;
+				color: red;
+			}
+			a:hover {
+				color: lightblue;
+			}
+			}
+		}
 		h4 {
 			font-weight: normal;
 			font-size: 1.1rem;
-			margin: 1% 0;
+			margin-bottom: 1%;
 		}
 		div {
 			width: 90%;
@@ -159,14 +194,47 @@ section {
 		width: 70%;
 		z-index: 0;
 		background-color: black;
-		div {
+		#conta {
 			width: 80%;
 		}
+		#rowen {
+			width: 90%;
+		}
 		h3 {
-			color: #ffff96;
+			color: @yenlo;
 		}
 		p {
 			color: white;
+		}
+	}
+	@media(max-width: 1500px){
+		#left {
+			#nav {
+				margin-bottom: 2%;
+			}
+		}
+		#right {
+			width: 100%;
+		}
+	}
+	@media(max-width: 950px){
+		#left {
+			#nav {
+				margin-bottom: 2%;
+			}
+		}
+		#right {
+			width: 150%;
+		}
+	}
+	@media(max-width: 800px){
+		#left {
+			nav {
+				margin-bottom: 0;
+			}
+		}
+		#right {
+			width: 200%;
 		}
 	}
 }
