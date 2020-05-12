@@ -4,6 +4,7 @@
    License: none (public domain)
 */
 @yenlo: #ffff96;
+@fakeblack: #000801;
 
 .sectionholders() {
 	display: flex;
@@ -101,7 +102,7 @@ header {
 		align-self: center;
 		max-height: 20vh;
 		h1 {
-			text-shadow: 2px 2px 10px black;
+			text-shadow: 2px 2px 10px @fakeblack;
 			font-weight: bold;
 			font-size: 3rem;
 		}
@@ -193,9 +194,10 @@ section {
 		padding-top: 10%;
 		width: 70%;
 		z-index: 0;
-		background-color: black;
+		background-color: @fakeblack;
 		#conta {
 			width: 80%;
+			text-align: center;
 		}
 		#rowen {
 			width: 90%;
